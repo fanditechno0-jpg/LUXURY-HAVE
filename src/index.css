@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --lh-accent: #b8860b;
+    --lh-accent-soft: rgba(184, 134, 11, 0.14);
+    --lh-glass-opacity: 0.78;
+    --lh-radius: 20px;
+    --lh-glow-intensity: 0.6;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, .font-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-mono-tabular {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.luxury-glass {
+  background-color: rgba(255, 252, 248, var(--lh-glass-opacity, 0.78));
+  backdrop-filter: blur(22px) saturate(135%);
+  -webkit-backdrop-filter: blur(22px) saturate(135%);
+}
+
+.dark .luxury-glass {
+  background-color: rgba(18, 17, 22, var(--lh-glass-opacity, 0.78));
+}
+
+.luxury-glass-subtle {
+  background-color: rgba(255, 250, 244, 0.56);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.dark .luxury-glass-subtle {
+  background-color: rgba(26, 24, 31, 0.56);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(160, 145, 125, 0.28);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(160, 145, 125, 0.45);
+}

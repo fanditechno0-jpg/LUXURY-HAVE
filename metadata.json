@@ -1,0 +1,6 @@
+{
+  "name": "LUXURY HAVE",
+  "description": "Platform sosial eksklusif Luxury Have dengan autentikasi server-side, kontrol penuh OWNER, pesan pribadi, panggilan suara/video, berbagi layar, ruang khusus, dan manajemen tema interaktif.",
+  "requestFramePermissions": ["camera", "microphone", "display-capture"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
